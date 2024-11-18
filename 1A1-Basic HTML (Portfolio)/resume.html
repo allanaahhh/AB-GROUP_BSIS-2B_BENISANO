@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/bootstrap.main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background: lightskyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        min-height: 1000px;
+        background: #fff;
+        margin: 50px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    }
+    .container .left_Side {
+        position: relative;
+        background: #066a98;
+        padding: 40px;
+    }
+    .profileText {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .profileText .imgBx {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .profileText .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .profileText h2 {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.4em;
+    }
+    .profileText h2 span {
+        font-size: o.8em;
+        font-weight: 300;
+    }
+    .contactInfo {
+        padding-top: 40px;
+    }
+    .title {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    .contactInfo ul {
+        position: relative;
+    }
+    .contactInfo ul li {
+        position: relative;
+        list-style: none;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    .contactInfo ul li .icon {
+        display: inline-block;
+        width: 30px;
+        font-size: 18px;
+        color: black;
+    }
+    .contactInfo ul li span {
+        color: #fff;
+        font-weight: 300;
+    }
+    .contactInfo.education li {
+        margin-bottom: 15px;
+    }
+    .contactInfo.education h5 {
+        color: #06075c;
+        font-weight: 700;
+    }
+    .contactInfo.education h4:nth-child(2) {
+        color: #fff;
+        font-weight: 500;
+    }
+    .contactInfo.education h4 {
+        color: #fff;
+        font-weight: 300;
+    }
+    .contactInfo.language .percent {
+        position: relative;
+        width: 100%;
+        height: 6px;
+        background: #081921;
+        display: block;
+        margin-top: 5px;
+    }
+    .contactInfo.language .percent div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: aqua;
+
+    }
+    .container .right_Side {
+        position: relative;
+        background: #fff;
+        padding: 40px;
+    }
+    .about {
+        margin-bottom: 50px;
+    }
+    .about:last-child {
+        margin-bottom: 0;
+    }
+    .title2 {
+        color: #06075c;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    p {
+        color: #000;
+    }
+    .about .box {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+    }
+    .about .box .year_received {
+        min-width: 150px;
+    }
+    .about .box .year_received h5 {
+        text-transform: uppercase;
+        color: #333;
+        font-weight: 600;
+    }
+    .about .box .text h4 {
+        text-transform: uppercase;
+        color: lightcoral;
+        font-size: 16px;
+    }
+    .skills .box {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills .box h4 {
+        text-transform: uppercase;
+        color: lightcoral;
+        font-weight: 500;
+    }
+    .skills .box .percent {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        background: #333;
+    }
+    .skills .box .percent div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: rgb(136, 181, 197);
+    }
+    .interest ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .interest ul li {
+        list-style: none;
+        color: #000;
+        font-weight: 500;
+        margin: 15px 0;
+    }
+    .interest ul li .bx {
+        color: lightcoral;
+        font-size: 20px;
+        width: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="left_Side">
+            <div class="profileText">
+                <div class="imgBx">
+                    <img src="IMG_20220613_185342_604.jpg">
+                </div>
+                <h2>Allanah Janelle Chintes Benisano<br><span>BSIS-2B</span></h2>
+            </div>
+
+            <div class="contactInfo">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class='bx bx-phone-call' ></i></span>
+                        <span class="text"> 09619587169</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class='bx bx-envelope' ></i></span>
+                        <span class="text"> yanabenisano@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class='bx bxl-facebook-circle' ></i></span>
+                        <span class="text"> Allanah Janelle Benisano</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class='bx bx-map' ></i></span>
+                        <span class="text"> Centro Oriental Polangui Albay</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="contactInfo education">
+                <h3 class="title">Education</h3>
+                <ul>
+                    <li>
+                        <h5>2011-2016</h5> 
+                        <h4>Polangui South Central Elementary School</h4>  
+                    </li>
+                    <li>
+                        <h5>2017-2020</h5>
+                        <h4>Polangui General Comprehensive High School</h4>  
+                    </li>
+                    <li>
+                        <h5>2021-2022</h5>
+                        <h4>Polangui General Comprehensive High School</h4>  
+                    </li>
+                    <li>
+                        <h5>College Student</h5>
+                        <h4>Bachelor of Science in Information System</h4>
+                        <h4>2nd year Student</h4>  
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contactInfo language">
+                <h3 class="title">Languages</h3>
+                <ul>
+                    <li>
+                        <span class="text">English</span>
+                        <span class="percent">
+                            <div style="width: 75%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Tagalog</span>
+                        <span class="percent">
+                            <div style="width: 85%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Bicol</span>
+                        <span class="percent">
+                            <div style="width: 80%;"></div>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="right_Side">
+            <div class="about">
+                <h2 class="title2">Personal Profile</h2>
+                <p>I am Allanah Janelle Benisano, 19 years old, and I live in Centro Oriental Polangui, Albay. I am currently a second-year Information Systems student with a foundational knowledge of C++, HTML, and CSS. Additionally, I have experience in web design and web development. </p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Awards Received</h2>
+                <div class="box">
+                    <div class="year_received">
+                        <h5>2017-2022</h5>
+                        <h5>High School-</h5>
+                        <h5>Senior High School</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Consistent Honor Student</h4>
+                    </div>
+                </div> 
+                <div class="box">
+                    <div class="year_received">
+                        <h5>2014-2016</h5>
+                        <h5>Elementary</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Representative in Lawn Tennis in School</h4>
+                    </div>
+                </div>   
+            </div>
+
+
+            <div class="about skills">
+                <h2 class="title2">Professional Skills</h2>
+                <div class="box">
+                    <h4>HTML</h4>
+                    <div class="percent">
+                        <div style="width: 30%;"></div>
+                    </div>
+                </div>  
+                <div class="box">
+                    <h4>C++</h4>
+                    <div class="percent">
+                        <div style="width: 50%;"></div>
+                    </div>
+                </div>  
+                <div class="box">
+                    <h4>CSS</h4>
+                    <div class="percent">
+                        <div style="width: 20%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Bootstrap</h4>
+                    <div class="percent">
+                        <div style="width: 19%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Editor</h4>
+                    <div class="percent">
+                        <div style="width: 30%;"></div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="about interest">
+                <h2 class="title2">Interest</h2>
+                <ul>
+                    <li><i class='bx bxs-tennis-ball' ></i> Lawn Tennis</li>
+                    <li> Badminton</li>
+                    <li><i class='bx bxs-basketball' ></i> Basketball</li>
+                    <li><i class='bx bx-book'></i> Reading Stories</li>
+                    <li><i class='bx bxs-movie' ></i> Wathching Movies</li>
+                    <li><i class='bx bx-movie-play'></i> Wathching Series</li>
+                    <li><i class='bx bxs-music'></i> Listening to music</li>
+                    <li><i class='bx bx-food-menu'></i> Cooking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
